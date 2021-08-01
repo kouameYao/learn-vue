@@ -1,13 +1,19 @@
 <template>
   <div class="container">
-    <div class="jumbotron">
-      <h2>Update Page</h2>
-    </div>
+    <page-header 
+      title="Modification d'activites" 
+      subTitle="Formulaire de modification d'une activité">
+    </page-header>
   </div>
 </template>
 
 <script>
+import PageHeader from '../components/PageHeader.vue';
 export default {
-  name: "Update"
+  name: "Update",
+  components: {
+    PageHeader,
+  }
+
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
   <!-- Login Register area Start-->
   <div class="login-content">
-    <!-- Login -->
-    <div class="nk-block toggled" id="l-login">
+    <!-- Register -->
+    <div class="nk-block toggled" id="l-register">
       <div class="nk-form">
         <div class="input-group">
           <span class="input-group-addon nk-ic-st-pro"
@@ -12,6 +12,19 @@
             <input type="text" class="form-control" placeholder="Username" />
           </div>
         </div>
+        <div class="input-group mg-t-15">
+          <span class="input-group-addon nk-ic-st-pro"
+            ><i class="notika-icon notika-mail"></i
+          ></span>
+          <div class="nk-int-st">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email Address"
+            />
+          </div>
+        </div>
+
         <div class="input-group mg-t-15">
           <span class="input-group-addon nk-ic-st-pro"
             ><i class="notika-icon notika-edit"></i
@@ -24,36 +37,31 @@
             />
           </div>
         </div>
-        <div class="fm-checkbox">
-          <label
-            ><input type="checkbox" class="i-checks" /> <i></i> Keep me signed
-            in</label
-          >
-        </div>
+
         <a
-          href="#l-register"
+          href="#l-login"
           data-ma-action="nk-login-switch"
-          data-ma-block="#l-register"
+          data-ma-block="#l-login"
           class="btn btn-login btn-success btn-float"
-          ><i class="notika-icon notika-right-arrow right-arrow-ant"></i
+          ><i class="notika-icon notika-right-arrow"></i
         ></a>
       </div>
 
-      <div class="nk-navigation nk-lg-ic">
-        <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-register"
-          ><i class="notika-icon notika-plus-symbol"></i>
+      <div class="nk-navigation rg-ic-stl">
+        <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-login"
+          ><i class="notika-icon notika-right-arrow"></i>
           <span>
-              <router-link to="/register"> S'enregistrer</router-link>
-            
-            </span></a
+              <router-link to="/login">Connexion</router-link>
+            </span>
+        </a
         >
         <a
-          href="#"
+          href=""
           data-ma-action="nk-login-switch"
           data-ma-block="#l-forget-password"
           ><i>?</i> <span>
-              <router-link to="/forgot-password">Mot de passe oublié</router-link>
             
+            <router-link to="/forgot-password">Mot de passe oublié</router-link>
             </span></a
         >
       </div>

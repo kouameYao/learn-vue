@@ -1,13 +1,19 @@
 <template>
   <div class="container">
-    <div class="jumbotron">
-      <h2>List Page</h2>
-    </div>
+    <page-header 
+      title="Liste d'activites" 
+      subTitle="Ici s'affiche la liste de toutes les activités">
+    </page-header>
   </div>
 </template>
 
 <script>
+import PageHeader from '../components/PageHeader.vue';
 export default {
-  name: "List"
+  name: "List",
+  components: {
+    PageHeader,
+  }
+
 };
 </script>

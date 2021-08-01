@@ -1,13 +1,19 @@
 <template>
   <div class="container">
-    <div class="jumbotron">
-      <h2>Read Page</h2>
-    </div>
+    <page-header 
+      title="Détails d'activité" 
+      subTitle="Visualisation des données d'une activité">
+    </page-header>
   </div>
 </template>
 
 <script>
+import PageHeader from '../components/PageHeader.vue';
 export default {
-  name: "Read"
+  name: "Read",
+  components: {
+    PageHeader,
+  }
+
 };
 </script>
