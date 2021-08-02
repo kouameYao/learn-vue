@@ -1,22 +1,16 @@
 import axios from 'axios';
 
-const headers = {
-    "apiKey" : 'bfcc768a-aeb0-4560-bf68-12b995bbfcfc',
-    'Content-Type': 'application/json',
-};
 export default {
-    async getAllNote() {
-        console.log("================ Recuperation de toutes les notes ============");
-        return await axios.get("/notes", {
-            headers: headers
-        });
+    async getAllActivite() {
+        console.log("================ Recuperation de toutes les activité ============");
+        return await axios.get("/activites");
     },
-    async addNote(data) {
-        console.log("================ Recuperation de toutes les notes ============", data);
-        return await axios.post("/notes");
+    async createActivite(data) {
+        console.log("================ Recuperation de toutes les s ============", data);
+        return await axios.post("/s");
     },
-    async getById(id) {
-        console.log("================ Recuperation de toutes les notes ============", id);
-        return await axios.get('/notes/${id}')
+    async getActiviteById(id) {
+        console.log("================ Recuperation de toutes les s ============", id);
+        return await axios.get('/s/${id}')
     }
 }

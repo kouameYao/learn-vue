@@ -7,6 +7,7 @@ import Read from "./views/Read.vue";
 import List from "./views/List.vue";
 
 import Login from "./views/Login.vue";
+import Logout from "./views/Logout.vue";
 import Register from "./views/Register.vue";
 import ForgotPassword from "./views/ForgotPassword.vue";
 
@@ -51,6 +52,11 @@ export const router = new Router({
       component: Login,
     },
     {
+      path: "/logout",
+      name: "logout",
+      component: Logout,
+    },
+    {
       path: "/register",
       name: "register",
       component: Register,
@@ -67,3 +73,27 @@ export const router = new Router({
     },
   ],
 });
+
+router.beforeEach((to, from, next) => {
+  const publicPages = ['/login', '/register', '/forgot-password'];
+  const authRequired = !publicPages.includes(to.path);
+  const token = localStorage.getItem('token');
+
+  // trying to access a restricted page + not logged in
+  // redirect to login page
+  if (authRequired && !token) {
+    next('/login');
+  } else {
+    next();
+  }
+});
+
+// router.beforeEach((to, from, next) => {
+//   if (to.path == "/login" && store.getters.isLoggedIn) {
+//     next({ name: "Login" });
+//     // } else if (to.path == "/login" && store.getters.isLoggedIn) {
+//     //   next({ name: "Home" });
+//   } else next();
+// });
+
+

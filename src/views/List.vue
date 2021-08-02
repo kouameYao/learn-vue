@@ -89,7 +89,7 @@ export default {
   },
 
   created() {
-    CrudService.getAllNote()
+    CrudService.getAllActivite()
     .then(response => console.log(response.data.data))
     .catch(error => console.log("Erreur ==>>>", error.response));
   },

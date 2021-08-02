@@ -40,6 +40,16 @@ export default {
   components: {
     PageFooter,
     NavBar,
+  },
+  data() {
+    return {
+      // "isLogin" : false
+    }
+  },
+  computed: {
+    isLogin() {
+      return true
+    }
   }
 
 };

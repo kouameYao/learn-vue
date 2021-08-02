@@ -35,6 +35,12 @@
                   <router-link to="/update">Update</router-link>
                 </a>
               </li>
+              <li>
+                <a data-toggle="tab" href="#Interface">
+                  <i class="notika-icon notika-edit"></i>
+                  <router-link to="/logout">Déconnexion</router-link>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

@@ -63,7 +63,31 @@
 </template>
 
 <script>
+import AuthService from '../services/auth.service';
 export default {
   name: "Accueil",
+  data() {
+    return {
+      form: {
+        'email' : 'pareyacouba@gmail.com',
+        'password' : '123456@password',
+        'device_name' : 'web-client'
+      }
+    }
+  },
+
+  methods: {
+    login() {
+      AuthService.login(this.form).then(response => {
+        const token = response.data.data.token;
+        localStorage.setItem("token", token);
+        console.log(":::>>>>", response.data);
+      });
+    }
+  },
+
+  created() {
+    this.login(); 
+  }
 };
 </script>
