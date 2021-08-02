@@ -10,6 +10,8 @@ import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import ForgotPassword from "./views/ForgotPassword.vue";
 
+import PageNotFound from "./views/404.vue";
+
 Vue.use(Router);
 
 export const router = new Router({
@@ -57,6 +59,11 @@ export const router = new Router({
       path: "/forgot-password",
       name: "forgot-password",
       component: ForgotPassword,
+    },
+    {
+      path: "*",
+      name: "Page introuvable",
+      component: PageNotFound,
     },
   ],
 });
