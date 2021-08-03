@@ -5,12 +5,12 @@ export default {
         console.log("================ Recuperation de toutes les activité ============");
         return await axios.get("/activites");
     },
-    async createActivite(data) {
-        console.log("================ Recuperation de toutes les s ============", data);
-        return await axios.post("/s");
+    async createActivite(activite) {
+        console.log("================ Création d'activité avec pour ============", activite);
+        return await axios.post("/activites", activite);
     },
-    async getActiviteById(id) {
-        console.log("================ Recuperation de toutes les s ============", id);
-        return await axios.get('/s/${id}')
+    async getAllPhase() {
+        console.log("================ Recuperation de toutes les s ============");
+        return await axios.get('/phases')
     }
 }
